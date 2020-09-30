@@ -38,7 +38,7 @@ if (len(ls) < 1):
 else:
     # compare the downloaded file to the previous one and keep if not identical
     latest = target_dir + sorted(ls)[-1]
-    if not filecmp.cmp(latest, fn):
+    if not filecmp.cmp(latest, fn, shallow = False):
         keep = True
         
 if keep:

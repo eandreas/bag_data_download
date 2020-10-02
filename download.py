@@ -44,7 +44,7 @@ else:
         
 if keep:
     # rename and keep the downloaded file
-    date_time = datetime.now().strftime("%d-%m-%Y_%H-%M")
+    date_time = datetime.now().strftime("%Y-%m-%d_%H-%M")
     fn_new = target_dir + '/' + date_time + '_' + url.split('/')[-1]
     os.rename(fn, fn_new)
 else:

@@ -6,7 +6,8 @@ from datetime import datetime
 URLs = {
     'BAG_test_data': 'https://www.bag.admin.ch/dam/bag/de/dokumente/mt/k-und-i/aktuelle-ausbrueche-pandemien/2019-nCoV/covid-19-basisdaten-labortests.xlsx.download.xlsx/Dashboard_3_COVID19_labtests_positivity.xlsx',
     'BAG_report_data': 'https://www.bag.admin.ch/dam/bag/de/dokumente/mt/k-und-i/aktuelle-ausbrueche-pandemien/2019-nCoV/covid-19-datengrundlage-lagebericht.xlsx.download.xlsx/200325_Datengrundlage_Grafiken_COVID-19-Bericht.xlsx',
-    'BAG_cases_data': 'https://www.bag.admin.ch/dam/bag/de/dokumente/mt/k-und-i/aktuelle-ausbrueche-pandemien/2019-nCoV/covid-19-basisdaten-fallzahlen.xlsx.download.xlsx/Dashboards_1&2_COVID19_swiss_data_pv.xlsx'
+    'BAG_cases_data': 'https://www.bag.admin.ch/dam/bag/de/dokumente/mt/k-und-i/aktuelle-ausbrueche-pandemien/2019-nCoV/covid-19-basisdaten-fallzahlen.xlsx.download.xlsx/Dashboards_1&2_COVID19_swiss_data_pv.xlsx',
+    'BAG_csv_data': 'https://www.covid19.admin.ch/api/data/20201106-n2t4sx0k/downloads/sources-csv.zip'
 }
 
 
@@ -59,3 +60,4 @@ def download_if_new(url, target_dir, suffix = ''):
 download_if_new(URLs['BAG_report_data'], Path('downloads/report_data'), suffix = '.xlsx')
 download_if_new(URLs['BAG_test_data'], Path('downloads/test_data'), suffix = '.xlsx')
 download_if_new(URLs['BAG_cases_data'], Path('downloads/cases_data'), suffix = '.xlsx')
+download_if_new(URLs['BAG_csv_data'], Path('downloads/csv_data'), suffix = '.zip')

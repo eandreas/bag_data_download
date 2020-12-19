@@ -2,3 +2,4 @@
 .ipynb_checkpoints
 *.xlsx
 downloads/csv_data/*.zip
+downloads/json_data/*.zip

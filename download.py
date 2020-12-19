@@ -58,7 +58,7 @@ def download_if_new(url, target_dir, suffix = ''):
     else:
         f_download.unlink()
         
-def get_csv_url(website, append_to_website = False):  
+def get_link_url(website, link_name, append_to_website = False):  
     page = requests.get(website)
     soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -68,7 +68,7 @@ def get_csv_url(website, append_to_website = False):
     for link in soup.select('a'):
         text = link.text
         text = text.strip() if text is not None else ''
-        if (text == 'Daten als .csv'):
+        if (text == link_name):
             url = link.get('href')
             url = url.strip() if url is not None else ''
             break
@@ -83,5 +83,8 @@ download_if_new(URLs['BAG_report_data'], Path('downloads/report_data'), suffix =
 download_if_new(URLs['BAG_test_data'], Path('downloads/test_data'), suffix = '.xlsx')
 download_if_new(URLs['BAG_cases_data'], Path('downloads/cases_data'), suffix = '.xlsx')
 
-csv_url = get_csv_url(URLs['BAG_covid19_website'], append_to_website = True)
+csv_url = get_link_url(URLs['BAG_covid19_website'], link_name = 'Daten als .csv', append_to_website = True)
 download_if_new(csv_url, Path('downloads/csv_data'), suffix = '.zip')
+
+json_url = get_link_url(URLs['BAG_covid19_website'], link_name = 'Daten als .json', append_to_website = True)
+download_if_new(json_url, Path('downloads/json_data'), suffix = '.zip')

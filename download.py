@@ -99,10 +99,10 @@ Path.mkdir(csv_data_dir, exist_ok = True)
 Path.mkdir(json_data_dir, exist_ok = True)
 
 # download new data
-download_if_new(URLs['BAG_2020_Q1'], daily_reports_dir, suffix = '.zip')
-download_if_new(URLs['BAG_2020_Q2'], daily_reports_dir, suffix = '.zip')
-download_if_new(URLs['BAG_2020_Q3'], daily_reports_dir, suffix = '.zip')
-download_if_new(URLs['BAG_2020_Q4'], daily_reports_dir, suffix = '.zip')
+download_if_new(URLs['BAG_2020_Q1'], daily_reports_dir, suffix = 'Quartal_1_2020_DE.zip')
+download_if_new(URLs['BAG_2020_Q2'], daily_reports_dir, suffix = 'Quartal_2_2020_DE.zip')
+download_if_new(URLs['BAG_2020_Q3'], daily_reports_dir, suffix = 'Quartal_3_2020_DE.zip')
+download_if_new(URLs['BAG_2020_Q4'], daily_reports_dir, suffix = 'Quartal_4_2020_DE.zip')
 #
 download_if_new(URLs['BAG_report_data'], report_data_dir, suffix = '.xlsx')
 download_if_new(URLs['BAG_test_data'], test_data_dir, suffix = '.xlsx')

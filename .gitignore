@@ -1,5 +1,8 @@
 .DS_Store
 .ipynb_checkpoints
 *.xlsx
-downloads/csv_data/*.zip
-downloads/json_data/*.zip
+downloads/csv_data/*
+downloads/json_data/*
+downloads/daily_reports/*
+downloads/json_data/*
+downloads/*
